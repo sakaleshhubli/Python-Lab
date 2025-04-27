@@ -1,12 +1,14 @@
-#swapping two variables
+#binomial coeff
+n = int(input("Enter the n value: "))
+r = int(input("Enter the r value: "))
 
-x = input("Enter the value of x: ")
-y = input("Enter the value of y: ")
+def fact(x):
+    if x ==1:
+        return 1
+    else:
+        return x*fact(x - 1)
+def bin_coeff(n,r):
+    b = (fact(n))/(fact(n-r)*fact(r))
+    return b
 
-temp = x
-x = y
-y = temp
-
-print("The value of x after swapping is", x)
-print("The value of y after swapping is", y)
-
+print("Binomial coefficient is:", bin_coeff(n,r))

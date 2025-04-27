@@ -1,11 +1,14 @@
-#area of triangle
+#fibonacci series
 
-import math
-a = float(input("Enter the length of first slide: "))
-b = float(input("Enter the length of second slide: "))
-c = float(input("Enter the length of third slide: "))
+n = int(input("Enter the length of series: "))
+n1 = 0
+n2 = 1
+next_number = n2 
+temp = 1
 
-s = (a+b+c)/2
-area = math.sqrt(s*(s-a)*(s-b)*(s-c))
-
-print("The area of triangle is", area)
+while temp <= n:
+	print(next_number, end=" ")
+	temp += 1
+	n1, n2 = n2, next_number
+	next_number = n1 + n2
+print()
